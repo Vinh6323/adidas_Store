@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Xác Nhận Đơn Hàng - Adidas Store</title>
+    <link rel="stylesheet" href="style/order.css">
+    <script src="script/order.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Adidas Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="store.html">Cửa Hàng</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="policy.html">Chính Sách</a></li>
+                <li><a href="cart.html">🛒 Giỏ Hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Nội dung xác nhận đơn hàng -->
+    <section class="order-confirmation-container">
+        <h1>Xác Nhận Đơn Hàng</h1>
+        
+        <!-- Thông tin khách hàng -->
+        <div class="order-form">
+            <h2>Thông tin khách hàng</h2>
+            <form id="order-form">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="payment-method">Phương thức thanh toán:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="cod">Thanh toán khi nhận hàng</option>
+                    <option value="bank">Chuyển khoản ngân hàng</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Hóa đơn mua hàng -->
+        <div class="order-summary">
+            <h2>Hóa đơn mua hàng</h2>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Sản Phẩm</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody id="order-items">
+                    <!-- Sản phẩm sẽ được hiển thị từ giỏ hàng -->
+                </tbody>
+            </table>
+            <h3>Tổng cộng: <span id="order-total">0 VNĐ</span></h3>
+        </div>
+
+        <!-- Nút xác nhận đơn hàng -->
+        <button id="complete-order-btn">Thanh Toán</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Adidas Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

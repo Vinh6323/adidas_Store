@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Chi Tiết Sản Phẩm | Adidas Store</title>
+    <link rel="stylesheet" href="style/product.css">
+    <script src="script/product.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Adidas Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="store.html">Cửa Hàng</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="policy.html">Chính Sách</a></li>
+                <li><a href="cart.html">🛒 Giỏ Hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Chi tiết sản phẩm -->
+    <section class="product-details">
+        <div class="product-image">
+            <img id="product-img" src="images/shoes1.jpg" alt="Sản phẩm">
+        </div>
+        <div class="product-info">
+            <h1 id="product-name">tên sản phẩm</h1>
+            <p id="product-desc">Mô tả sản phẩm sẽ hiển thị ở đây.</p>
+            <p class="price"><strong>Giá: </strong> <span id="product-price">0</span> VNĐ</p>
+            <button onclick="addToCartFromProduct()">Thêm vào giỏ</button>
+        </div>
+    </section>
+
+</body>
+</html>

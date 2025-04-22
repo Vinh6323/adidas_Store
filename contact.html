@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Liên Hệ - Adidas Store</title>
+    <link rel="stylesheet" href="style/contact.css">
+    <script src="script/contact.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Adidas Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="store.html">Cửa Hàng</a></li>
+                <li><a href="contact.html" class="active">Liên Hệ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="policy.html">Chính Sách</a></li>
+                <li><a href="cart.html">🛒 Giỏ Hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Tiêu đề -->
+    <section class="contact-header">
+        <h1>Liên Hệ Với Chúng Tôi</h1>
+        <p>Hãy để lại tin nhắn, chúng tôi sẽ phản hồi sớm nhất!</p>
+    </section>
+    <!-- Form Liên Hệ -->
+    <section class="contact-form">
+        <h2>Gửi tin nhắn</h2>
+        <form id="contactForm">
+            <label for="name">Họ và Tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nội dung:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Gửi tin nhắn</button>
+        </form>
+    </section>
+    <!-- Thông tin liên hệ -->
+    <section class="contact-info">
+        <h2>Thông Tin Liên Hệ</h2>
+        <p><strong>📍 Địa chỉ:</strong> TP. Hồ Chí Minh</p>
+        <p><strong>📞 Điện thoại:</strong> 0949-996-548</p>
+        <p><strong>📧 Email:</strong> support@adidasstore.com</p>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="map">
+        <h2>Vị Trí Của Chúng Tôi</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0301705927353!2d108.21412927606745!3d16.059956984632267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219dcd39f87c7%3A0x47f00b3e6b6a71b!2zMTIzIE5ndXnhu4VuIFbEg24gTGluaCwgVHLGsOG7nW5nIE5ndXnhu4VuIEJp5biCbiwgxJDDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1710000000000" 
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+</body>
+</html>

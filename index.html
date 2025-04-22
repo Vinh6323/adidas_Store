@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Adidas Store - Trang Chủ</title>
+    <link rel="stylesheet" href="style/index.css">
+    <script src="script/index.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Adidas Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Trang Chủ</a></li>
+                <li><a href="store.html">Cửa Hàng</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="policy.html">Chính Sách</a></li>
+                <li><a href="cart.html">🛒 Giỏ Hàng</a></li>
+            </ul>
+        </nav>
+        <div class="user-options">
+            <a href="login.html">Đăng nhập</a> | <a href="register.html">Đăng ký</a>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="images/banner.webp" alt="Adidas Store">
+    </section>
+
+    <!-- Tìm kiếm -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+        <button onclick="searchProduct()">🔍 Tìm kiếm</button>
+    </div>
+
+    <!-- Danh sách sản phẩm nổi bật -->
+    <section class="product-grid">
+        <div class="product" data-category="shoes" data-price="2700000">
+            <img src="images/shoes1.jpg" alt="Giày Samba OG" onclick="viewProduct('shoes1')">
+            <h3 onclick="viewProduct('shoes1')">Giày Samba OG</h3>
+            <p class="price">2,700,000 VNĐ</p>
+            <button onclick="addToCart('Giày Samba OG', 2700000, event)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product" data-category="socks" data-price="400000">
+            <img src="images/tat.jpg" alt="Bộ 3 Đôi Tất Cao Cổ Có Đệm" onclick="viewProduct('socks1')">
+            <h3 onclick="viewProduct('socks')">Bộ 3 Đôi Tất Cao Cổ Có Đệm</h3>
+            <p class="price">400,000 VNĐ</p>
+            <button onclick="addToCart('Bộ 3 Đôi Tất Cao Cổ Có Đệm', 400000, event)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product" data-category="jacket" data-price="1800000">
+            <img src="images/aokhoac.jpg" alt="Áo Khoác Colorblock Own The Run" onclick="viewProduct('jacket1')">
+            <h3 onclick="viewProduct('jacket1')">Áo Khoác Colorblock Own The Run</h3>
+            <p class="price">1,800,000 VNĐ</p>
+            <button onclick="addToCart('Áo Khoác Colorblock Own The Run', 1800000, event)">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product" data-category="pants" data-price="1050000">
+            <img src="images/quan.jpg" alt="Quần Short Tập Luyện Designed for Training" onclick="viewProduct('pants1')">
+            <h3 onclick="viewProduct('pants1')">Quần Short Tập Luyện Designed for Training</h3>
+            <p class="price">1,050,000 VNĐ</p>
+            <button onclick="addToCart('Quần Short Tập Luyện Designed for Training', 1050000, event)">Thêm vào giỏ</button>
+        </div>
+    </section>
+</body>
+</html>

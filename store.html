@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Adidas Store - Cửa Hàng</title>
+    <link rel="stylesheet" href="style/store.css">
+    <script src="script/store.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Adidas Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="store.html" class="active">Cửa Hàng</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="policy.html">Chính Sách</a></li>
+                <li><a href="cart.html">🛒 Giỏ Hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bộ lọc sản phẩm -->
+    <section class="filter-section">
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="all">Danh mục sản phẩm</option>
+            <option value="shoes">Giày</option>
+            <option value="jacket">Áo</option>
+            <option value="pants">Quần</option>
+            <option value="socks">Tất</option>
+        </select>
+        
+        <input type="text" id="searchBar" placeholder="Nhập từ khóa..." onkeyup="searchProduct()">
+        
+        <select id="sortPrice" onchange="sortProducts()">
+            <option value="default">Sắp xếp giá</option>
+            <option value="asc">Giá tăng dần</option>
+            <option value="desc">Giá giảm dần</option>
+        </select>
+    </section>
+
+    <!-- Danh sách sản phẩm -->
+    <section class="product-grid">
+        <div class="product" data-category="shoes" data-price="2700000">
+            <img src="images/shoes1.jpg" alt="Giày Samba OG" onclick="viewProduct('shoes1')">
+            <h3 onclick="viewProduct('shoes1')">Giày Samba OG</h3>
+            <p class="price">2,700,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="1"
+                data-name="Giày Samba OG"
+                data-price="2700000"
+                data-image="images/shoes1.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="shoes" data-price="2600000">
+            <img src="images/shoes2.jpg" alt="Giày Superstar" onclick="viewProduct('shoes2')">
+            <h3 onclick="viewProduct('shoes2')">Giày Superstar</h3>
+            <p class="price">2,600,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="2"
+                data-name="Giày Superstar"
+                data-price="2600000"
+                data-image="images/shoes2.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="jacket" data-price="1800000">
+            <img src="images/aokhoac.jpg" alt="Áo Khoác Colorblock Own The Run" onclick="viewProduct('jacket1')">
+            <h3 onclick="viewProduct('jacket1')">Áo Khoác Colorblock Own The Run</h3>
+            <p class="price">1,800,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="3"
+                data-name="Áo Khoác Colorblock Own The Run"
+                data-price="1800000"
+                data-image="images/aokhoac.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="pants" data-price="1050000">
+            <img src="images/quan.jpg" alt="Quần Short Tập Luyện Designed for Training" onclick="viewProduct('pants1')">
+            <h3 onclick="viewProduct('pants1')">Quần Short Tập Luyện Designed for Training</h3>
+            <p class="price">1,050,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="4"
+                data-name="Quần Short Tập Luyện Designed for Training"
+                data-price="1050000"
+                data-image="images/quan.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="socks" data-price="400000">
+            <img src="images/tat.jpg" alt="Bộ 3 Đôi Tất Có Đệm" onclick="viewProduct('socks1')">
+            <h3 onclick="viewProduct('socks1')">Bộ 3 Đôi Tất Có Đệm</h3>
+            <p class="price">400,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="5"
+                data-name="Bộ 3 Đôi Tất Có Đệm"
+                data-price="400000"
+                data-image="images/tat.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="shoes" data-price="2600000">
+            <img src="images/giay.jpg" alt="Giày Campus 00s - trắng" onclick="viewProduct('shoes3')">
+            <h3 onclick="viewProduct('shoes3')">Giày Campus 00s - trắng</h3>
+            <p class="price">2,600,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="6"
+                data-name="Giày Campus 00s - trắng"
+                data-price="2600000"
+                data-image="images/giay.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="jacket" data-price="3500000">
+            <img src="images/aokhoac1.jpg" alt="Áo khoác XPL 2.5L ANORAK - xám" onclick="viewProduct('jacket2')">
+            <h3 onclick="viewProduct('jacket2')">Áo khoác XPL 2.5L ANORAK - xám</h3>
+            <p class="price">3,500,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="7"
+                data-name="Áo khoác XPL 2.5L ANORAK - xám"
+                data-price="3500000"
+                data-image="images/aokhoac1.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="jacket" data-price="750000">
+            <img src="images/ao.jpg" alt="Áo Thun Own the Run" onclick="viewProduct('jacket3')">
+            <h3 onclick="viewProduct('jacket3')">Áo Thun Own the Run</h3>
+            <p class="price">750,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="8"
+                data-name="Áo Thun Own the Run"
+                data-price="750000"
+                data-image="images/ao.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="pants" data-price="1800000">
+            <img src="images/quan1.jpg" alt="Quần Có Túi 3 Sọc Future Icons" onclick="viewProduct('pants2')">
+            <h3 onclick="viewProduct('pants2')">Quần Có Túi 3 Sọc Future Icons</h3>
+            <p class="price">1,800,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="9"
+                data-name="Quần Có Túi 3 Sọc Future Icons"
+                data-price="1800000"
+                data-image="images/quan1.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="pants" data-price="750000">
+            <img src="images/quan2.jpg" alt="Quần Short Tiro 23 League - đen" onclick="viewProduct('pants3')">
+            <h3 onclick="viewProduct('pants3')">Quần Short Tiro 23 League - đen</h3>
+            <p class="price">750,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="10"
+                data-name="Quần Short Tiro 23 League - đen"
+                data-price="750000"
+                data-image="images/quan2.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="socks" data-price="450000">
+            <img src="images/tat1.jpg" alt="Bộ 2 Đôi Tất adidas Originals x Made by Nelson" onclick="viewProduct('socks2')">
+            <h3 onclick="viewProduct('socks2')">Bộ 2 Đôi Tất adidas Originals x Made by Nelson</h3>
+            <p class="price">450,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="11"
+                data-name="Bộ 2 Đôi Tất adidas Originals x Made by Nelson"
+                data-price="450000"
+                data-image="images/tat1.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+
+        <div class="product" data-category="socks" data-price="200000">
+            <img src="images/tat2.jpg" alt="Tất Graphic Tết" onclick="viewProduct('socks3')">
+            <h3 onclick="viewProduct('socks3')">Tất Graphic Tết</h3>
+            <p class="price">200,000 VNĐ</p>
+            <button class="add-to-cart"
+                data-id="12"
+                data-name="Tất Graphic Tết"
+                data-price="200000"
+                data-image="images/tat2.jpg">
+                Thêm vào giỏ
+            </button>
+        </div>
+    </section>   
+</body>
+</html>

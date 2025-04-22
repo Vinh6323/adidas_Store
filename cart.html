@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Giỏ Hàng - Adidas Store</title>
+    <link rel="stylesheet" href="style/cart.css">
+    <script src="script/cart.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Adidas Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Trang Chủ</a></li>
+                <li><a href="store.html">Cửa Hàng</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="policy.html">Chính Sách</a></li>
+                <li><a href="cart.html" class="active">🛒 Giỏ Hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Giỏ hàng -->
+    <section class="cart-container">
+        <h1>Giỏ Hàng Của Bạn</h1>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Sản Phẩm</th>
+                    <th>Tên</th>
+                    <th>Giá</th>
+                    <th>Số Lượng</th>
+                    <th>Thành tiền</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Các sản phẩm sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <h2>Tổng Cộng: <span id="total-price">0 VNĐ</span></h2>
+            <button id="checkout-btn">Xác Nhận Đơn Hàng</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Adidas Store. Bản quyền thuộc về Adidas.</p>
+    </footer>
+
+</body>
+</html>

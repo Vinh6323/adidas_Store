@@ -1,0 +1,138 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 15px 50px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hiệu ứng active */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f1c40f;
+}
+
+/* Banner */
+.about-banner {
+    text-align: center;
+    background: url('../images/about-banner.jpg') no-repeat center/cover;
+    color: rgb(11, 4, 4);
+    padding: 80px 20px;
+}
+
+.about-banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-banner p {
+    font-size: 18px;
+}
+
+/* Nội dung chính */
+.about-content {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-box h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.about-box p, .about-box ul {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-box ul {
+    padding-left: 20px;
+}
+
+.about-box ul li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        width: 95%;
+    }
+
+    .about-banner {
+        padding: 60px 10px;
+    }
+
+    .about-banner h1 {
+        font-size: 28px;
+    }
+
+    .about-banner p {
+        font-size: 16px;
+    }
+}

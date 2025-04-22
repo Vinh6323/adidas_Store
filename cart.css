@@ -1,0 +1,136 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 15px 50px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hiệu ứng active */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f1c40f;
+}
+
+/* Container giỏ hàng */
+.cart-container {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.cart-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Bảng giỏ hàng */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.cart-table th {
+    background: #f4f4f4;
+}
+
+/* Input số lượng */
+.cart-table input {
+    width: 50px;
+    text-align: center;
+}
+
+/* Nút xóa */
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background: darkred;
+}
+
+/* Tổng cộng */
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.cart-summary h2 {
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#checkout-btn {
+    background: #000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#checkout-btn:hover {
+    background: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: white;
+    margin-top: 50px;
+}
