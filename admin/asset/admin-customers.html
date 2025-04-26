@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý khách hàng | Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/admin-customers.js" defer></script>
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Quản lý khách hàng</h1>
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html">Trang Chủ</a>
+      <a href="admin-customers.html" class="active">Khách Hàng</a>
+      <a href="admin-products.html">Sản Phẩm</a>
+      <a href="admin-orders.html">Đơn Hàng</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="form-section">
+      <h2>Thêm / Sửa Khách Hàng</h2>
+      <form id="customer-form">
+        <input type="hidden" id="customer-id">
+        <input type="text" id="customer-name" placeholder="Tên khách hàng" required>
+        <input type="email" id="customer-email" placeholder="Email" required>
+        <button type="submit">Lưu</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Danh sách khách hàng</h2>
+      <input type="text" id="search-customer" placeholder="Tìm kiếm...">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Tên</th><th>Email</th><th>Hành Động</th></tr>
+        </thead>
+        <tbody id="customer-list"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="admin-footer">
+    &copy; 2025 Adidas Store - Trang Quản Trị
+  </footer>
+</body>
+</html>

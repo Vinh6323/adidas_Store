@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản Lý Đơn Hàng - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/admin-orders.js" defer></script>
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Quản Lý Đơn Hàng</h1>
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html">Trang Chủ</a>
+      <a href="admin-customers.html">Khách Hàng</a>
+      <a href="admin-products.html">Sản Phẩm</a>
+      <a href="admin-orders.html" class="active">Đơn Hàng</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>📋 Danh sách đơn hàng</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Mã đơn</th>
+          <th>Khách hàng</th>
+          <th>Sản phẩm</th>
+          <th>Tổng tiền</th>
+          <th>Trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="order-list">
+        <!-- Đơn hàng sẽ được hiển thị bằng JavaScript -->
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="admin-footer">
+    &copy; 2025 Adidas Store - Trang Quản Trị
+  </footer>
+</body>
+</html>

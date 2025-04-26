@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản Lý Sản Phẩm - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/admin-products.js" defer></script>
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Quản Lý Sản Phẩm</h1>
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html">Trang Chủ</a>
+      <a href="admin-customers.html">Khách Hàng</a>
+      <a href="admin-products.html" class="active">Sản Phẩm</a>
+      <a href="admin-orders.html">Đơn Hàng</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>📦 Danh sách sản phẩm</h2>
+
+    <form id="product-form">
+      <input type="hidden" id="edit-index">
+      <input type="text" id="product-id" placeholder="Mã sản phẩm" required>
+      <input type="text" id="product-name" placeholder="Tên sản phẩm" required>
+      <input type="number" id="product-price" placeholder="Giá" required>
+      <input type="number" id="product-stock" placeholder="Tồn kho" required>
+      <select id="product-status">
+        <option value="Còn hàng">Còn hàng</option>
+        <option value="Hết hàng">Hết hàng</option>
+      </select>
+      <button type="submit">Lưu</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mã</th>
+          <th>Tên</th>
+          <th>Giá</th>
+          <th>Tồn kho</th>
+          <th>Trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="product-list"></tbody>
+    </table>
+  </main>
+
+  <footer class="admin-footer">
+    &copy; 2025 Adidas Store - Trang Quản Trị
+  </footer>
+</body>
+</html>

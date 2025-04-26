@@ -1,0 +1,23 @@
+:root{
+  --main-bg-color: black;
+  --sub-bg-color: white;
+  --top-height: 70px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.row-grid {
+  display: grid;
+  justify-content: space-between;
+}
+/*main-admin*/
+.admin .row-grid {
+  grid-template-columns: 25% 75%;
+}
